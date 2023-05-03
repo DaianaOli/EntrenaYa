@@ -13,8 +13,13 @@ function Rutinas() {
   }, []);
 
   return (
-    <div>
-      <h1>Rutinas</h1>
+    <div
+      className="mt-2 overflow-hidden shadow sm:rounded-lg p-4 flex flex-wrap gap-8"
+    >
+      <h1
+        className="text-3xl font-medium leading-6 text-teal-400"
+      >
+      Rutinas</h1>
      {
         rutinas.map(rutina => (
           <Rutina key={rutina.id} rutina={rutina}/>

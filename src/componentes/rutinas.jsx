@@ -1,11 +1,16 @@
 const Rutinas = ({rutina}) => {
 
   return (
-    <div>
-      <ul>
+    <div
+      className="mt-2 overflow-hidden shadow sm:rounded-lg p-4 flex flex-wrap gap-8"
+    >
+      <ul
+      >
         {rutina.map((rutina) => (
           <li key={rutina.id}>
-            <h1>{rutina.nombre}</h1>
+            <h1
+              className="text-3xl font-medium leading-6 text-teal-400"
+            >{rutina.nombre}</h1>
             <p>{rutina.descripcion}</p>
             <p>{rutina.tiempo} minutos</p>
             <ul>

@@ -5,6 +5,7 @@ import Usuarios from './paginas/Usuarios';
 import Registro from './paginas/Registro';
 import Login from './paginas/Login';
 import PanelUsuario from './paginas/Panel/PanelUsuario';
+import Inicio from './paginas/Inicio/Inicio';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Registro />} isAuthenticated={isAuthenticated}/>
         <Route path='/login' element={<Login/>} isAuthenticated={isAuthenticated}/>
+        <Route path="/inicio" element={<Inicio />} />
         <Route exact path="/panel/:id" element={<PanelUsuario isAuthenticated={isAuthenticated} /> }   />
         <Route path="/ejercicios" element={<Ejercicios />} />
         <Route path="/rutinas" element={<Rutinas />} />

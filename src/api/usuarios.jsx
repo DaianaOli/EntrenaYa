@@ -79,6 +79,8 @@ export const iniciarSesion = async (usuario) => {
     const response = await axios.post(`${API_URL}/usuarios/login`, usuario);
     console.log(response)
     localStorage.setItem('token', response.data.token)
+    localStorage.setItem('id', response.data.id)
+    window.location.href = `/panel/${response.data.id}`;
     return response.data;
   }
   catch (error) {
