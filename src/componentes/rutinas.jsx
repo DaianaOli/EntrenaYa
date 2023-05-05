@@ -2,20 +2,23 @@ const Rutinas = ({rutina}) => {
 
   return (
     <div
-      className="mt-2 overflow-hidden shadow sm:rounded-lg p-4 flex flex-wrap gap-8"
+      className="mt-2 overflow-hidden p-4 flex flex-col "
     >
       <ul
       >
         {rutina.map((rutina) => (
           <li key={rutina.id}>
             <h1
-              className="text-3xl font-medium leading-6 text-teal-400"
+              className="text-2xl font-medium leading-6 text-teal-900"
             >{rutina.nombre}</h1>
-            <p>{rutina.descripcion}</p>
+            <p
+            >{rutina.descripcion}</p>
             <p>{rutina.tiempo} minutos</p>
             <ul>
               {rutina.Ejercicios?.map((ejercicio) => (
-                <li key={ejercicio.id}>
+                <li key={ejercicio.id}
+                className="flex flex-col items-center"
+                >
                   <h3>{ejercicio.nombre}</h3>
                   <p>{ejercicio.descripcion}</p>
                   <p>{ejercicio.sets} sets de {ejercicio.repeticiones} repeticiones</p>

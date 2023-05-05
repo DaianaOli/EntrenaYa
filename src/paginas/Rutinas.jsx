@@ -14,7 +14,7 @@ function Rutinas() {
 
   return (
     <div
-      className="mt-2 overflow-hidden shadow sm:rounded-lg p-4 flex flex-wrap gap-8"
+      className="mt-2 overflow-hidden w-full flex flex-col "
     >
       <h1
         className="text-3xl font-medium leading-6 text-teal-400"
@@ -22,7 +22,9 @@ function Rutinas() {
       Rutinas</h1>
      {
         rutinas.map(rutina => (
+          <div className='flex flex-wrap gap-8 items-center'>
           <Rutina key={rutina.id} rutina={rutina}/>
+          </div>
         ))
      }
     </div>
