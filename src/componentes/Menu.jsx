@@ -5,7 +5,6 @@ import {HiOutlineLogout, HiOutlineUserCircle, HiOutlineChartBar, HiOutlineClock 
 const Menu = () => {
   const [abierto, setAbierto] = useState(false); // Usamos el estado para controlar si el menú está abierto o cerrado
   const idUsuario = localStorage.getItem('id'); // Obtenemos el id del usuario del localStorage
-console.log(idUsuario,"id")
   const toggleMenu = () => {
     setAbierto(!abierto); // Invertimos el estado del menú
   };

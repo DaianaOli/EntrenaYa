@@ -58,3 +58,6 @@ export const iniciarSesion = usuario => ({
   payload: usuario
 });
 
+export const volver = ()=>{
+  window.history.back();
+}

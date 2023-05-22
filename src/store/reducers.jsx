@@ -6,7 +6,7 @@ const ejerciciosReducer = (state = [], action) => {
   switch (action.type) {
     case OBTENER_EJERCICIOS:
       // Retorna el estado actual
-      return [action.payload];
+      return action.payload;
     case AGREGAR_EJERCICIO:
       // Agrega el nuevo ejercicio al estado
       return [...state, action.payload];
